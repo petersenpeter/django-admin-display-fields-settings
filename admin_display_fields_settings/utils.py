@@ -1,6 +1,6 @@
-from urlparse import urlparse
+from urllib import parse
 from django.contrib import admin
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.http import QueryDict
 
 
@@ -12,7 +12,7 @@ def getAdminViewByUrl(url):
     if url is None:
         return False
 
-    http_referer = urlparse(url).path
+    http_referer = parse(url).path
     for obj in admin.site._registry:
         view = admin.site._registry[obj]
         if http_referer == reverse("admin:%s_%s_changelist" % (

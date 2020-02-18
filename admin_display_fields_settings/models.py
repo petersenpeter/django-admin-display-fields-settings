@@ -5,7 +5,7 @@ from django.db import models
 class DisplaySettings(models.Model):
 
     id = models.AutoField(primary_key=True)
-    user_id = models.ForeignKey(User, verbose_name=u"User", null=False, blank=False)
+    user_id = models.ForeignKey(User, verbose_name=u"User", null=False, blank=False, on_delete=models.PROTECT)
     app_label = models.CharField(max_length=100, verbose_name=u"Application label", null=False, blank=False)
     model = models.CharField(max_length=100, verbose_name=u"Model name", null=False, blank=False)
     view = models.CharField(max_length=100, verbose_name=u"View name", null=False, blank=False)

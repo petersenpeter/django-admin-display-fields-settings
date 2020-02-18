@@ -1,11 +1,13 @@
 import os
 from setuptools import setup
 
+
 def read(fname):
-	try:
-	    return open(os.path.join(os.path.dirname(__file__), fname)).read()
-	except IOError:
-	    return ''
+    try:
+        return open(os.path.join(os.path.dirname(__file__), fname)).read()
+    except IOError:
+        return ''
+
 
 setup(
     name='django-admin-display-fields-settings',
@@ -26,8 +28,7 @@ setup(
         'License :: OSI Approved :: GNU General Public License (GPL)',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2.6',
-        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.7',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
     ],
 )
