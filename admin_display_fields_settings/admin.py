@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.db.models import FieldDoesNotExist
+from django.core.exceptions import FieldDoesNotExist
 from .forms import DisplayFieldsSettings
 from .models import DisplaySettings
 import json, types
